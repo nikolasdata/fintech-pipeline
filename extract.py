@@ -1,7 +1,12 @@
 import requests
 import csv
+import os
+from dotenv import load_dotenv
 
-API_KEY = "818XF7I47058AD92"  # paste your Alpha Vantage key here
+load_dotenv()
+
+API_KEY = os.environ.get("ALPHA_VANTAGE_KEY")
+
 symbol = "EUR/USD"
 
 url = f"https://www.alphavantage.co/query?function=FX_DAILY&from_symbol=EUR&to_symbol=USD&apikey={API_KEY}"
