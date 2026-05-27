@@ -38,19 +38,20 @@ An end-to-end ELT pipeline built with Python, PostgreSQL, and dbt, pulling live 
 | `trend_detection` | 30-day rolling average of close price |
 
 ## Project structure
-fintech-pipeline/
-├── extract.py              # pulls data from Alpha Vantage API
-├── transform.py            # cleans and adds daily_range column
-├── load.py                 # loads into SQLite (local backup)
-├── load_to_postgres.py     # loads into PostgreSQL
-├── upload_to_s3.py         # uploads CSVs to AWS S3
-├── run_pipeline.py         # runs full pipeline in sequence
-├── forex_models/           # dbt project
-│   └── models/
-│       ├── daily_volatility.sql
-│       ├── monthly_summary.sql
-│       └── trend_detection.sql
-└── .env                    # credentials (not committed to GitHub)
+
+    fintech-pipeline/
+    ├── extract.py              # pulls data from Alpha Vantage API
+    ├── transform.py            # cleans and adds daily_range column
+    ├── load.py                 # loads into SQLite (local backup)
+    ├── load_to_postgres.py     # loads into PostgreSQL
+    ├── upload_to_s3.py         # uploads CSVs to AWS S3
+    ├── run_pipeline.py         # runs full pipeline in sequence
+    ├── forex_models/           # dbt project
+    │   └── models/
+    │       ├── daily_volatility.sql
+    │       ├── monthly_summary.sql
+    │       └── trend_detection.sql
+    └── .env                    # credentials (not committed to GitHub)
 ## Security
 
 Credentials are stored in a `.env` file and excluded from version control via `.gitignore`.
