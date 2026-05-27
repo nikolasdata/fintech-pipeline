@@ -1,0 +1,1 @@
+select max(high) monthly_high, max(low) monthly_low, avg(close) monthly_avg, date_trunc('month', date::date) monthly_date from eur_usd group by monthly_date order by monthly_date
