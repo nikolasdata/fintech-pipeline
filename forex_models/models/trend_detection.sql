@@ -1,0 +1,1 @@
+select (round(AVG(close) OVER (ORDER BY date::date ROWS BETWEEN 29 PRECEDING AND CURRENT ROW)::numeric,5)) as Rolling_avg , date, close from eur_usd order by date::date
