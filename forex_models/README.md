@@ -14,7 +14,7 @@ dbt models for the Fintech ELT Pipeline, running analytical transformations on E
 
     dbt run                                    # build all models
     dbt test                                   # run data tests
-    dbt docs generate && dbt docs serve        # view documentation
+
 
 ## Connection
 
