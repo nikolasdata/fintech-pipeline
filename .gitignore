@@ -4,3 +4,6 @@
 venv312/
 logs/
 .vs/
+*.zip
+lambda_extract/
+lambda_transform/
