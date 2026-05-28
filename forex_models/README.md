@@ -11,9 +11,10 @@ dbt models for the Fintech ELT Pipeline, running analytical transformations on E
 | `trend_detection` | 30-day rolling average of close price using SQL window functions |
 
 ## How to run
-dbt run       # build all models
-dbt test      # run data tests
-dbt docs generate && dbt docs serve  # view documentation
+
+    dbt run                                    # build all models
+    dbt test                                   # run data tests
+    dbt docs generate && dbt docs serve        # view documentation
 
 ## Connection
 
