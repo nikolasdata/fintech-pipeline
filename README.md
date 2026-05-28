@@ -52,26 +52,27 @@ dbt run
 | `trend_detection` | 30-day rolling average of close price |
 
 ## Project structure
-   fintech-pipeline/
-   ├── local/                  # local pipeline scripts
-   │   ├── extract.py
-   │   ├── transform.py
-   │   ├── load.py
-   │   ├── load_to_postgres.py
-   │   ├── upload_to_s3.py
-   │   └── run_pipeline.py
-   ├── lambda/                 # AWS Lambda functions
-   │   ├── extract.py
-   │   └── transform.py
-   ├── RDS/                    # RDS connection scripts
-   │   └── load_to_postgres.py
-   ├── forex_models/           # dbt project
-   │   └── models/
-   │       ├── daily_volatility.sql
-   │       ├── monthly_summary.sql
-   │       └── trend_detection.sql
-   ├── .gitignore
-   └── README.md
+
+    fintech-pipeline/
+    ├── local/                  # local pipeline scripts
+    │   ├── extract.py
+    │   ├── transform.py
+    │   ├── load.py
+    │   ├── load_to_postgres.py
+    │   ├── upload_to_s3.py
+    │   └── run_pipeline.py
+    ├── lambda/                 # AWS Lambda functions
+    │   ├── extract.py
+    │   └── transform.py
+    ├── RDS/                    # RDS connection scripts
+    │   └── load_to_postgres.py
+    ├── forex_models/           # dbt project
+    │   └── models/
+    │       ├── daily_volatility.sql
+    │       ├── monthly_summary.sql
+    │       └── trend_detection.sql
+    ├── .gitignore
+    └── README.md
 
 ## Security
 
