@@ -1,15 +1,20 @@
-Welcome to your new dbt project!
+# forex_models — dbt Project
 
-### Using the starter project
+dbt models for the Fintech ELT Pipeline, running analytical transformations on EUR/USD forex data stored in PostgreSQL.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Models
 
+| Model | Description |
+|---|---|
+| `daily_volatility` | Top 10 most volatile EUR/USD trading days ranked by daily price range |
+| `monthly_summary` | Average, high, and low close price per month |
+| `trend_detection` | 30-day rolling average of close price using SQL window functions |
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## How to run
+dbt run       # build all models
+dbt test      # run data tests
+dbt docs generate && dbt docs serve  # view documentation
+
+## Connection
+
+Connects to PostgreSQL (local or AWS RDS). Configure credentials in `~/.dbt/profiles.yml`.
