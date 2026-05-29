@@ -1,5 +1,4 @@
-Here's the updated README:
-markdown# Fintech ELT Pipeline — EUR/USD
+Fintech ELT Pipeline — EUR/USD
 
 An end-to-end ELT pipeline built with Python, PostgreSQL, dbt, and AWS, pulling live forex data from the Alpha Vantage API and modelling it for financial analysis.
 
